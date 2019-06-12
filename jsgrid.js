@@ -39,3 +39,22 @@ DateField.prototype = new jsGrid.Field({
 });
 
 jsGrid.fields.date = DateField;
+
+filterTemplate: function() {
+    if(!this.filtering)
+        return "";
+
+    var grid = this._grid,
+        $result = this.filterControl = this._createTextBox();
+
+    if(this.autosearch) {
+        $result.on("keypress", function(e) {
+            if(e.which === 13) {
+                grid.search();
+                e.preventDefault();
+            }
+        });
+    }
+
+    return $result;
+}
