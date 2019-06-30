@@ -1,0 +1,83 @@
+
+<div class='wrap'>
+    <div class='loader' id='lrd1'></div>
+    <div class='loader' id='lrd2'></div>
+    <div class='loader' id='lrd3'></div>
+  </div>
+<style>
+.wrap{
+  position:absolute;
+  left:50%;
+  width:5em;
+  height:5em;
+  top:20%;
+  transform: translate(-50%,-50%);
+}
+
+.loader{
+    transition: all 0.7s ease-in-out;
+
+  border:10px solid #ebebeb;
+  border-bottom-color:#26B8BF;
+  width:75%;
+  height:75%;
+  border-radius:50%;
+  -webkit-font-smoothing: antialiased !important;
+  margin:30px 0px;
+}
+
+#lrd1{
+    -webkit-animation: spin1 0.5s linear infinite;
+
+}
+#lrd2{
+    -webkit-animation: spin2 3s ease-in-out infinite;
+
+}
+#lrd3{
+    -webkit-animation: spin3 15s ease-in-out infinite;
+
+}
+
+@keyframes spin1{
+  0% {
+    transform: rotate(0deg);    
+  }
+
+
+  100% {
+    transform: rotate(360deg); 
+  }
+
+}
+@keyframes spin2{
+  0% {
+    transform: rotate(0deg);    
+  }
+  50% {
+    transform: rotate(1020deg);    
+  }
+  
+  
+  100% {
+    transform: rotate(720deg); 
+  }
+}
+
+@keyframes spin3{
+  0% {
+    transform: rotate(0deg);    
+  }
+  40% {
+    transform: rotate(1070deg);    
+  }
+  
+  
+  100% {
+    transform: rotate(6119deg);
+    border-bottom-color:#072426 !important;
+  }
+}
+
+
+</style>  
